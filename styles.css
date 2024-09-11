@@ -1,0 +1,234 @@
+/* Imagem de fundo para todas as páginas */
+body {
+    background-image: url('imagem-empresa.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Estilo geral da barra de navegação */
+header {
+    background-color: rgba(46, 139, 87, 0.9); /* Fundo verde com transparência */
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a img {
+    height: 50px; /* Ajuste o tamanho conforme necessário */
+    margin-left: 15px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #2e8b57;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Menu responsivo para telas pequenas */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: rgba(46, 139, 87, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transition: transform 0.5s ease-in;
+        transform: translateX(100%);
+    }
+
+    .nav-links li {
+        margin: 50px 0;
+    }
+
+    .nav-links li a {
+        font-size: 24px;
+    }
+
+    .nav-links.active {
+        transform: translateX(0%);
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* Estilos específicos para as páginas */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Estilos para a página de catálogo e agendamento */
+.catalog, .agendamento {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.catalog h2, .agendamento h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.catalog ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.catalog ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.agendamento form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agendamento label {
+    margin: 10px 0 5px;
+}
+
+.agendamento input, .agendamento textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.agendamento button {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.agendamento button:hover {
+    background-color: #128C7E;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #128C7E;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: rgba(46, 139, 87, 0.9); /* Cor de fundo verde com transparência */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.875rem; /* Ajuste o tamanho da fonte conforme necessário */
+    border-top: 2px solid #2e8b57; /* Borda superior do rodapé */
+}
+
+footer p {
+    margin: 0;
+}
